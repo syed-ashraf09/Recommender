@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 column_names=['user_id','item_id','rating','timestamp']
-df=pd.read_csv("C:\\Users\\Ashraf\\Documents\\python-data-science-and-machine-learning-bootcamp-jose-portilla-master\\19-Recommender-Systems\\u.data",sep='\t',names=column_names)
+df=pd.read_csv("u.data",sep='\t',names=column_names)
 print(df.head())
-movie_titles=pd.read_csv("C:\\Users\\Ashraf\\Documents\\python-data-science-and-machine-learning-bootcamp-jose-portilla-master\\19-Recommender-Systems\\Movie_Id_Titles")
+movie_titles=pd.read_csv("Movie_Id_Titles")
 print(movie_titles.head())
 df=pd.merge(df,movie_titles,on='item_id')#joining 2 datasets on item_id which is common on both datasets
 print(df.head())
